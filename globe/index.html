@@ -1,0 +1,94 @@
+<!-- https://vasturiano.github.io/three-globe/ -->
+<!-- https://github.com/vasturiano/globe.gl -->
+<!-- https://threejs.org/docs/#api/en/lights/DirectionalLight -->
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="dist/three.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="dist/globe4.gl.js"></script>
+  <link rel="stylesheet" href="globe6.css" />
+  <link rel="stylesheet" href="globesearch.css" />
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+</head>
+
+<!--<body onLoad="window.scroll(0, window.innerHeight)">  <!--/1.1)-->
+<body>
+  
+  
+  
+<!--  <div id="intro"></div>-->
+  <div id="main-content">
+    <div id="play-pause-container" class="">
+      <div id="play-pause-icon" class="icon"></div>
+      <div id="timer" class="" style="--duration: 48;--size: 100;">
+        <div id="mask" class=""></div>
+      </div>
+    </div>
+    <div id="reset-icon" class="icon"></div>
+    <div id="interface" class="">
+      <div id="interface-content">
+        <div id="description" class="visible">
+          This interactive visualization allows users to explore data from “Global Architectures: The Alvin Ailey American Dance Theater, City by City and Year by Year, 1958-89,” which is part of the <a href="https://www.movingdatastudio.com/#current" target="_blank"><i>Radical Accounting</i></a> series commissioned for the Edges of Ailey exhibition at the Whitney Museum of American Art (2024-25). We see AAADT growing from a small touring company to a global phenomenon, as they shared a living history of dance with audiences around the world.
+        </div>
+        <div id="globe-container">
+          <div id="globeViz"></div>
+        </div>
+        <div id="my-tooltip" class="scrollable"></div>
+        <div id="my-tooltip-2" class="draggable">
+
+What is Lorem Ipsum?
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+      </div>
+        <div id="reverse-icon" class="icon"></div>
+      </div>
+      <div id="menu-icon" class="icon"></div>
+      <div id="side-panel" class="">
+        <div id="video">
+          <iframe id="yt-video" width="240" height="135" src="https://www.youtube.com/embed/6J2_lSUflSI?autoplay=1&loop=1&playlist=6J2_lSUflSI&controls=0&showinfo=0" title="YouTube video player" frameborder="0" fs="0" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <a id="video-link" title="Watch on Whitney's website" href="https://whitney.org/media/61535" target="_blank"></a>
+        </div>
+        <div id="searchBar">
+          <div id="searchInputAndCloseButton">
+            <input id="searchInput" type="text" name="search" placeholder="Search..." autocomplete="off">
+            <a id="searchCloseButton" href=""></a>
+          </div>
+          <div class="searchResults">
+            <div class="searchResultsContainer">
+              <ul id="searchUL" class="scrollable"></ul>
+              <span id="noResults" style="font-style: italic; display:none;"> No matches found.</span>
+            </div>
+          </div>
+        </div>
+        <div id="credits"><i>Radical Accounting: Alvin Ailey American Dance Theater’s Data as a Framework for Historical Imagination</i> (2022-2025) is by Kate Elswit and Harmony Bench (Moving Data), with Antonio Jiménez-Mavillard and Tia-Monique Uzor. It was commissioned for the Edges of Ailey exhibition at the Whitney Museum of American Art (2024-25) with additional support from: the UK Arts and Humanities Research Council (AHRC, ref: AH/W005034/1); the Royal Central School of Speech and Drama; and The Ohio State University. With special thanks to Adrienne Edwards, Engell Speyer Family Senior Curator and Associate Director of Curatorial Affairs at the Whitney Museum of American Art. Performance data has been manually curated from archival materials and is publicly available from the National Archive of Data on Arts and Culture.</div>
+      </div>
+      <div id="side-panel-2" class="">
+
+What is Lorem Ipsum?
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Where does it come from?
+
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+
+      </div>
+    </div>
+    <div id="welcome">
+      <img id="fake-cursor" src="icon/cursor2.png">
+      <div id="custom-tooltip"></div>
+      <div id="instruction-list">
+      </div>
+      <div id="bands">
+        <div id="top-band" class="band"></div>
+        <div id="bottom-band" class="band"></div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script src="globe6.js"></script>
+</body>
