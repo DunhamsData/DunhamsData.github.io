@@ -11,7 +11,7 @@ This repository contains the code for a standalone web visualization built entir
 - Hosting only requires serving the files in this repository as-is.
 
 ## How to run online
-You can view a live version of the visualization here: <a href="https://dunhamsdata.github.io/globe/" target="_blank">https://dunhamsdata.github.io/globe/</a>
+You can view a live version of the visualization here: [https://dunhamsdata.github.io/globe/](https://dunhamsdata.github.io/globe/)
 
 ## How to run locally
 1. Clone or download this repository.  
